@@ -29,7 +29,7 @@ module "nomad-starter" {
 }
 
 data "aws_instance" "server" {
-  instance_tabs = {
+  instance_tags = {
     Name = "${var.prefix}-nomad-server"
   }
 }
