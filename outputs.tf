@@ -3,5 +3,5 @@ output "vpc_id" {
 }
 
 output "server_ip" {
-  value = data.aws_instance.public_ip
+  value = data.aws_instance.server.public_ip
 }
