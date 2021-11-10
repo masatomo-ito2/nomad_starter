@@ -32,5 +32,7 @@ data "aws_instance" "server" {
   instance_tags = {
     Name = "${var.prefix}-nomad-server"
   }
+
+	depens_on = module.nomad-starter
 }
 
