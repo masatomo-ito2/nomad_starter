@@ -3,9 +3,9 @@ provider "aws" {
 }
 
 data "aws_vpc" "selected" {
-	tags = {
-		Name = var.vpc_name
-	}
+  tags = {
+    Name = var.vpc_name
+  }
 }
 
 module "nomad-starter" {
@@ -18,11 +18,11 @@ module "nomad-starter" {
   nomad_version         = "1.1.6"
   owner                 = "masa"
   name_prefix           = "masa"
-  key_name              = "masa_aws"
+  key_name              = var.key_name
   nomad_servers         = 1
   nomad_clients         = 3
 
-	# Optional
-	enable_connect = true
-	public_ip = true
+  # Optional
+  enable_connect = true
+  public_ip      = true
 }
