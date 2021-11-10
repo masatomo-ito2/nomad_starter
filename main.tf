@@ -20,9 +20,10 @@ module "nomad-starter" {
   name_prefix           = "masa"
   key_name              = var.key_name
   nomad_servers         = 1
-  nomad_clients         = 3
+  nomad_clients         = 2
 
   # Optional
   enable_connect = true
   public_ip      = true
+  instance_type  = var.instance_type
 }
