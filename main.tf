@@ -17,7 +17,7 @@ module "nomad-starter" {
   consul_version        = "1.10.3"
   nomad_version         = "1.1.6"
   owner                 = "masa"
-  name_prefix           = "masa"
+  name_prefix           = var.prefix
   key_name              = var.key_name
   nomad_servers         = 1
   nomad_clients         = 2
@@ -27,3 +27,10 @@ module "nomad-starter" {
   public_ip      = true
   instance_type  = var.instance_type
 }
+
+data "aws_instance" "server" {
+  instance_tabs = {
+    Name = "${var.prefix}-nomad-server"
+  }
+}
+
