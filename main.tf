@@ -33,6 +33,6 @@ data "aws_instance" "server" {
     Name = "${var.prefix}-nomad-server"
   }
 
-	depens_on = module.nomad-starter
+	depends_on = module.nomad-starter
 }
 
