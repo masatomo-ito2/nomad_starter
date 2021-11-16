@@ -14,9 +14,9 @@ module "nomad-starter" {
   # insert the 6 required variables here
   allowed_inbound_cidrs = ["0.0.0.0/0"]
   vpc_id                = data.aws_vpc.selected.id
-  consul_version        = "1.10.3"
-  nomad_version         = "1.1.6"
-  owner                 = "masa"
+  consul_version        = var.consul_version
+  nomad_version         = var.nomad_version
+  owner                 = var.owner
   name_prefix           = var.prefix
   key_name              = var.key_name
   nomad_servers         = 1

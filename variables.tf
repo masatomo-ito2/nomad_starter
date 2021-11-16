@@ -13,3 +13,15 @@ variable "instance_type" {
 variable "prefix" {
   type = string
 }
+
+variable "consul_version" {
+  type = string
+}
+
+variable "nomad_version" {
+  type = string
+}
+
+variable "owner" {
+  type = string
+}
