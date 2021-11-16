@@ -7,5 +7,5 @@ output "server_ip" {
 }
 
 output "nomad_dns" {
-  value = "https://${data.aws_istance.public_dns}:4646"
+  value = "https://${data.aws_instance.public_dns}:4646"
 }
