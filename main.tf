@@ -12,7 +12,7 @@ module "nomad-starter" {
   source  = "hashicorp/nomad-starter/aws"
   version = "0.2.1"
   # insert the 6 required variables here
-  allowed_inbound_cidrs = ["0.0.0.0/32"]
+  allowed_inbound_cidrs = ["0.0.0.0/0"]
   vpc_id                = data.aws_vpc.selected.id
   consul_version        = "1.10.3"
   nomad_version         = "1.1.6"
