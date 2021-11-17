@@ -18,3 +18,11 @@ output "consul_dns" {
   value = "http://${data.aws_instance.server.public_dns}:8500"
 }
 
+output "env_setup" {
+  value = <<EOF
+
+export NOMAD_ADDR="http://${data.aws_instance.server.public_dns}:4646"
+export CONSUL_ADDR="http://${data.aws_instance.server.public_dns}:8500"
+
+EOF
+}
