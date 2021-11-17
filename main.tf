@@ -36,3 +36,9 @@ data "aws_instance" "server" {
   depends_on = [module.nomad-starter]
 }
 
+data "aws_instances" "clients" {
+  filter {
+    Name = "${var.prefix}-nomad-client"
+  }
+}
+
