@@ -7,7 +7,7 @@ output "server_ip" {
 }
 
 output "client_ip" {
-	value = data.aws_instances.client.public_ips
+  value = data.aws_instances.clients.public_ips
 }
 
 output "nomad_dns" {
