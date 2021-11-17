@@ -22,7 +22,7 @@ output "env_setup" {
   value = <<EOF
 
 export NOMAD_ADDR="http://${data.aws_instance.server.public_dns}:4646"
-export CONSUL_ADDR="http://${data.aws_instance.server.public_dns}:8500"
+export CONSUL_HTTP_ADDR="http://${data.aws_instance.server.public_dns}:8500"
 
 EOF
 }
